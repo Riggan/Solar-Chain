@@ -1,0 +1,37 @@
+<html>
+
+<head profile="http://www.w3.org/2005/10/profile">
+  <link rel="icon"
+      type="image/png"
+      href="https://lh3.googleusercontent.com/oyuXMyIft2tQ-yY6JhMDroMbkDYkPtbwTnitkwnYojnj7gXPpWdXpBIVENOg2wulPXcquj5ksPYKH0EX2npHlFY6pXkO4BZRX6fSDEV3G6UYkLugmDXZhKiXEahOOXYZBv12oEdwU1jHAoSyP0bCewc7fkpOhLcb3QCjYp-S6OBMhtl6lcN6vetvR9exuDHsBx9jGxLepcSL68rYkcxiFQ_GKoYCZ1lU0b8dCxcnAvYsmm_S2lXsoOhi1XD8MKoUS-FDSdQJNQP3745QMW9KnI4yTPw-Jtz-Fhb5e15EJ4mjA5WcBTzmMsNfDFDDlOnNXRBVQEbImQEPBZjAPhYVm2l6BmEqJWGEqX4xz_hpcQn_VfiTSk2b6h3GQQ-o5zIPmGWh5ib50qIb4hIlTHaFhRqMSpkW7zAimOYZX7nJEOyWpSUCG2mw_P2UdVWw4MWxhazqNSncOxfQwtArVfGJGZ_ir7vUwKUL5vKCSK5Sv8T0_zRFAbba_8EqMGI1wHoIYaeuDPRFSWB8UbsAcfU1nzA3ijALr0h52-WCdmgL2jCC0zeC4f-nF-h1yQ0epOAEBppYqxvGwAg5vBngu9W9RqvYdBXgVwVS3avpdRcc9_al0RtM5Z5iMy1pWvHJX2xvtowPSrGNaTHjE-QgWOialwT7PGbXgStO=s500-no">
+  <title>{{ title }}</title>
+  <style>
+    #bg {
+      background: linear-gradient(to top, #cccccc -3%, #ffffff 80%);
+    }
+  </style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+
+<body id="bg">
+
+
+  <center>
+    <h1>{{ title }}</h1>
+  </center>
+  <hr>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }} </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</body>
+
+</html>
